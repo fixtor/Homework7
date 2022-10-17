@@ -1,6 +1,7 @@
 def Input_data_file(file_name, any_strings, attribute):
     data = open(file_name, attribute, encoding='utf-8')
     data.writelines(any_strings + '\n')
+    data.flush()
     data.close()
 
 

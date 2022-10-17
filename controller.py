@@ -11,6 +11,8 @@ data = open(file_name, 'a')
 data_string = (Output_data_file_string(file_name))
 data_list = data_string.split('\n')
 
+def Get_from_Data(Data_string):
+	return Data_string
 
 
 #Считаем строки в текстовом файле
@@ -53,25 +55,23 @@ def find_text_in_block(data_list):
 
 
 def show_full_list():
-	print(data_string)
-
+	a = Output_data_file_string(file_name)
+	print(Output_data_file_string(file_name))
+	return a
 
 
 def add_new_line(file_name):
-	Input_data_file(file_name,
-	                input('Введите новую запись в справочник в порядке:\n Фамилия, Имя, Телефон, Примечание:\n'), 'a')
-
-	a = input('Продолжить заполнение? (y/n)')
-	while a == 'y':
-		if a != 'y': break
+	ne_line = input('Введите новую запись в справочник в порядке:\n Фамилия, Имя, Телефон, Примечание:\n')
+	Input_data_file(file_name, ne_line, 'a')
 
 
 
 def save_txt(file_name):
-	Input_data_file(file_name, data_string, 'w')
+	a  = input('Введите имя файла в которыый созранить: ')
+	Input_data_file(a, show_full_list(), 'w')
 
 def new_dict():
 	print('Добро пожаловать в Справочник!')
-	print('Для начала создадим файл для сохранения')
+
 
 

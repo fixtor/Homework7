@@ -22,6 +22,7 @@ def main():
 
 		elif a == 4:
 			add_new_line(file_name)
+			# Get_from_Data()
 			a = user_interface.show_menu()
 
 		elif a == 5:
